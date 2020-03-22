@@ -1,0 +1,16 @@
+version: '3'
+services:
+    express:
+        build: .
+        image: yumemo/express
+        container_name: express
+        hostname: express
+        tty: true
+        ports:
+            - "3000:3000"
+        volumes:
+            - ./app:/root/app
+            - node_modules:/root/app/node_modules
+volumes:
+    node_modules:
+        driver: 'local'
