@@ -1,12 +1,13 @@
-FROM node:alpine3.11
+FROM node:lts-alpine3.11
 LABEL Maintainer="ymmmtym"
 
 ENV APP='/root/app' \
-    HOSTNAME='express'
+    HOSTNAME='express' \
+    PS1='[\u@\h \W]# '
 WORKDIR ${APP}
 COPY ["./app", "${APP}"]
 
 RUN npm install
 
-CMD [ "node", "./bin/www"]
 EXPOSE 3000
+CMD [ "node", "./bin/www"]
