@@ -1,11 +1,11 @@
 FROM node:lts-alpine3.11
 LABEL Maintainer="ymmmtym"
 
-ENV APP='/root/app' \
+ENV APP='/opt/app' \
     HOSTNAME='express' \
     PS1='[\u@\h \W]# '
+COPY [".", "${APP}"]
 WORKDIR ${APP}
-COPY ["./app", "${APP}"]
 
 RUN npm install
 

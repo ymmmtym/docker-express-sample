@@ -1,4 +1,4 @@
-# docker-express-template
+# template-node-express
 ## Requrements
 -  docker >=  19.03.8
 -  docker-compose >= 1.25.4

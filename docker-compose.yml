@@ -9,8 +9,8 @@ services:
         ports:
             - "3000:3000"
         volumes:
-            - ./app:/root/app
-            - node_modules:/root/app/node_modules
+            - .:/opt/app
+            - node_modules:/opt/app/node_modules
 volumes:
     node_modules:
         driver: 'local'
